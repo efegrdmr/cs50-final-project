@@ -7,35 +7,35 @@ My final project is a website to track your progress and record your thoughts th
 ## main.py
 This file handles http requests from browser and java script. I used XMLHttpRequests to interact with the data in database which sends http requests to /api route of the server. I used that api approach to make the website respond to the sever without refreshing the page. I sent data to the server using header files of request which I needed to encode with encodeURIComponent function in js and decode with a urllib.parse.unquote method in server-side. 
 
-##helpers.py
+## helpers.py
 This file consists with sqlite table creation script, login require wrapper and id checkers that checks if a to-do or habit is users own.
 
-##diary_entry.js
+## diary_entry.js
 This file has functions for creating http requests to crate, change and delete a new todo and diary. Makes buttons and text inputs interactable without refreshing the page.
 
-##diary_entry.html
+## diary_entry.html
 This file has todos and diary text inputs and has the template to create new todos.
 
-##entries.js
+## entries.js
 Makes cards on entries page clickable, delete buttons, go button work.
 
-##entries.html
+## entries.html
 This page helps you to navigate through your diaries and go to a specific day’s diary.
 
-##index.js
+## index.js
 That script redirects you to today’s diary.
-##settings.js
+## settings.js
 This file has functions to make tabs in settings.html work, and functions to create, delete, change habit. Has a alert function to inform user. Contains functions that sends http requests to server to change password, email, user name, and to delete account.
 
-##settings.html
+## settings.html
 Settings page to change account details, And habits.
 ## layout.html
 Has html code for navigation bar.
 
-##register.html
+## register.html
 Has a form to register a new user.
 
-##signin.html
+## signin.html
 Has a form to sign in users.
 
 
