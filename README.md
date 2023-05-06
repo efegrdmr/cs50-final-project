@@ -1,3 +1,4 @@
-# cs50-final-project
+# To-Do and Diary site
+#### Video Demo:  <URL HERE>
+#### Description:
 
-A To-Do and Diary site to track your progress and record your thoughts about day
