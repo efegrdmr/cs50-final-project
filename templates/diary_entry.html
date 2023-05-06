@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ day }} {% endblock %}
+{% block head %}
+    <script>
+        const day = '{{ day|safe }}';
+    </script>
+    <script src="/static/diary_entry.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="m-auto w-25 border border-3 text-center" id="current-date"></div>
+<div class="row mt-3 d-flex">
+    <div class="col-md-4">
+        <div class="card" >
+            <div class="card-header text-center"><b>To-Do</b></div>
+            <div class="card-body">
+                <table class="table table-borderless">
+                    <tbody>
+                        <span id="to-dos"></span>
+                        <tr><td class="text-center"><button class="btn btn-primary" id="new-to-do">new to-do</button></td></tr>
+
+                    </tbody>
+                </table>
+                <template>
+                    <tr id="to-do-row">
+                        <td class="text-start"><input type="text" class="form-control" value=""></td>
+                        
+                        <td class="text-end"><button class="btn <!--success for completed light for not completed--> check-btn">&#10004</button></td>
+                        <td class="text-end"><button class="btn btn-danger delete-btn">X</button></td>
+                    </tr>
+                </template>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-8">
+        <textarea name="Diary" id="diary" class="form-control" rows="15" placeholder="Write something about your day ..."></textarea>
+    </div>
+</div>
+{% endblock %}

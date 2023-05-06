@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block title %} Settings {% endblock %}
+{% block head %} <script src="/static/settings.js"></script>{% endblock %}
+{% block main %}
+<div class="row">
+    <div class="col-sm-5 col-lg-2">
+        <div class="card">
+            <div class="card-header">
+            <h5 class="card-title mb-0">Settings</h5>
+            </div>
+            <div class="list-group list-group-flush" role="tablist">
+                <a class="list-group-item list-group-item-action active" for="habits">
+                    Habits
+                </a>
+                <a class="list-group-item list-group-item-action" for="password">
+                    Password
+                </a>
+                <a class="list-group-item list-group-item-action" for="email">Email</a>
+                <a class="list-group-item list-group-item-action" for="user-name">User Name</a>
+                <a class="list-group-item list-group-item-action" for="delete-account">Delete Account</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-7 col-lg-10">
+        <div class="tab-content">
+            <div class="tab-pane fade active show" id="habits" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">Add or Delete Habits</div>
+                    <div class="card-body">
+                        <table class="table table-borderless">
+                            <tbody id="habit-table">
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary" id="new-habit">new habit</button>
+                    
+                        <template id="habit-template">
+                            <tr>
+                                <td><input type="text" class="form-control"></td>
+                                <td><button class="btn btn-danger">X</button></td>
+                            </tr>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="password" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">Change Password</div>
+                    <div class="card-body">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="password" id="new-password" placeholder="New Password">
+                            <label class="form-label" for="new-password">New Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="password" id="confirmation-password" placeholder="Current Password">
+                            <label class="form-label" for="confirmation-password">Confirmation</label>
+                        </div>
+                        <button class="btn btn-primary" id="change-password">Change</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="email" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">Change Email</div>
+                    <div class="card-body">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="email" id="new-email" placeholder="New Email">
+                            <label class="form-label" for="new-email">New Email</label>
+                        </div>
+                        <button class="btn btn-primary" id="change-email">Change</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="user-name" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">Change User Name</div>
+                    <div class="card-body">
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="email" id="new-user-name" placeholder="New User Name">
+                            <label class="form-label" for="new-user-name">New User Name</label>
+                        </div>
+                        <button class="btn btn-primary" id="change-user-name">Change</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="delete-account" role="tabpanel">
+                <div class="card">
+                    <div class="card-header">Delete Account</div>
+                    <div class="card-body">
+                        <h5 class="display-5">This will delete your account permanently</h4>
+                        <button class="btn btn-danger mt-2" id="delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</div>
+{% endblock %}

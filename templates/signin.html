@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form action="/signin" method="post">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control w-50" id="user_name" name="user_name_email" placeholder="User Name or Email">
+                <label class="form-label" for="user_name">User Name or Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control w-50" id="password" name="password" placeholder="Password">
+                <label class="form-label" for="password">Password</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %} Entries {% endblock %}
+
+{% block head %}
+<script src="/static/entries.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="row m-auto w-50 mb-3">
+    <div class="col-8">
+        <input id="date" class="form-control" type="date"/>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-primary" id="btn-go">Go</button>
+    </div>
+</div>
+
+<div class="container" id="diaries">
+{% for batch_day in days|batch(3) %}
+    <div class="row">
+        {% for day in batch_day %}
+        <div class="col-auto col my-1" value="{{day.day}}">
+            <div class="card h-100" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{day.day}}</h5>
+                <p class="card-text">{{day.diary}}</p>
+                <a class="btn btn-danger delete" value="{{day.id}}">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

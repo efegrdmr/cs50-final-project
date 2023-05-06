@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form action="/register" method="post">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control w-50" id="user-name" name="user_name" placeholder="User Name">
+                <label class="form-label" for="user-name">User Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control w-50" id="email" name="email" placeholder="Email">
+                <label class="form-label" for="email">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control w-50" id="password" name="password" placeholder="Password" minlength="4">
+                <label class="form-label" for="password">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control w-50" id="confirmation" name="confirmation" placeholder="Password Confirmation">
+                <label class="form-label" for="confirmation">Password Confirmation</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+{% endblock %}
